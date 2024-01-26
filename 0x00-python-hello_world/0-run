@@ -27,3 +27,4 @@ main() {
   check_python_file
   run_python_script
 }
+main
