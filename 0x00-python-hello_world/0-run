@@ -1,15 +1,2 @@
 #!/bin/bash
-
-# Check if PYFILE is set and is a file
-[ -z "$PYFILE" ] && {
-  echo "Error: PYFILE environment variable not set."
-  exit 1
-}
-
-[ ! -f "$PYFILE" ] && {
-  echo "Error: Python file '$PYFILE' not found."
-  exit 1
-}
-
-# Run the Python script
-python3 "$PYFILE"
+python3 $PYFILE
