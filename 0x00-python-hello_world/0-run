@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Function to check if the PYFILE environment variable is set
+check_pyfile_variable() {
+  if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+  fi
+}
+
+# Function to check if the specified Python file exists
+check_python_file() {
+  if [ ! -f "$PYFILE" ]; then
+    echo "Error: Python file '$PYFILE' not found."
+    exit 1
+  fi
+}
+
+# Function to run the Python script
+run_python_script() {
+  python "$PYFILE"
+}
+
+# Main function
+main() {
+  check_pyfile_variable
+  check_python_file
+  run_python_script
+}
